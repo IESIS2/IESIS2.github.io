@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/js/p5.js"></script>
+  </head>
+  <body>
+    <div class="pageheader">THE <b>CODE</b> OF NATURE<br>
+                            DAVID FOUNTAIN
+    </div>
+    <div class="flex-container">
+      <nav>
+    
+      <a href="/2018/08/22/Introduction.html">Introduction</a><br>
+    
+      <a href="/2018/08/21/apples.html">Apples</a><br>
+    
+      <a href="/2018/08/20/bananas.html">Bananas</a><br>
+    
+</nav>
+      <div class="content"><div>
+    <h1>Introduction</h1>
+
+    <p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the
+edible berry of several species of woody vines in the genus Actinidia.</p>
+
+<p>The most common cultivar group of kiwifruit is oval, about the size of
+a large hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm
+(1.8–2.2 in) in diameter). It has a fibrous, dull greenish-brown skin
+and bright green or golden flesh with rows of tiny, black, edible
+seeds. The fruit has a soft texture, with a sweet and unique flavor.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Set simulation framerate to 10 to avoid flickering</span>
+  <span class="nf">frameRate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nf">createCanvas</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
+  <span class="nx">canvas</span><span class="p">.</span><span class="nf">parent</span><span class="p">(</span><span class="dl">'</span><span class="s1">gameoflife</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">w</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+  <span class="c1">// Calculate columns and rows</span>
+  <span class="nx">columns</span> <span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="nx">width</span> <span class="o">/</span> <span class="nx">w</span><span class="p">);</span>
+  <span class="nx">rows</span> <span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="nx">height</span> <span class="o">/</span> <span class="nx">w</span><span class="p">);</span>
+  <span class="c1">// Wacky way to make a 2D array is JS</span>
+  <span class="nx">board</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="nx">columns</span><span class="p">);</span>
+  <span class="k">for </span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">columns</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="nx">rows</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// Going to use multiple 2D arrays and swap them</span>
+  <span class="nx">next</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="nx">columns</span><span class="p">);</span>
+  <span class="k">for </span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">columns</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">next</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="nx">rows</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nf">init</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div id="gameoflife"><script src="/assets/js/gameoflife.js"></script></div>
+
+    
+</div></div>
+    </div>
+  </body>
+</html>
