@@ -11,7 +11,7 @@ a large hen's egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm
 and bright green or golden flesh with rows of tiny, black, edible
 seeds. The fruit has a soft texture, with a sweet and unique flavor.
 
-```js
+```javascript
 function setup() {
   // Set simulation framerate to 10 to avoid flickering
   frameRate(10);
